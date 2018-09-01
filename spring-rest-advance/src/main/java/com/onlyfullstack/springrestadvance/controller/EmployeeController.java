@@ -58,19 +58,9 @@ public class EmployeeController {
 		 return new ResponseEntity<>(HttpStatus.CREATED);
 	 }
 	 
-   /* @PostMapping
-    public void createTransaction(@Valid @RequestBody TransactionDTO transactionDTO) throws ConstraintsViolationException
-    {
-    	System.out.println("controller : "+transactionDTO);
-    	TransactionDO transactionDO = TransactionMapper.convert(transactionDTO);
-    	System.out.println("controller Mapper : "+transactionDO);
-    	service.addTransaction(transactionDO);
-    }*/
-	 
     @DeleteMapping
     public void deleteEmployee(@PathVariable Long employeeId) throws EntityNotFoundException
     {
     	service.deleteEmployee(employeeId);
-       
     }
 }

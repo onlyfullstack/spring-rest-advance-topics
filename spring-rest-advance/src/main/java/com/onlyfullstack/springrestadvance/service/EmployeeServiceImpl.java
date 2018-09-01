@@ -20,10 +20,12 @@ public class EmployeeServiceImpl implements EmployeeService{
 		repository.save(employee);
 	}
 
+	@Override
 	public List<EmployeeDO> getAllEmployees() {
 		return (List<EmployeeDO>) repository.findAll();
 	}
 	
+	@Override
 	public EmployeeDO getEmployee(Long employeeId) throws EntityNotFoundException{
 		return repository.findById(employeeId).orElseThrow(() 
 				-> new EntityNotFoundException("Employee", "empId", employeeId.toString()));
