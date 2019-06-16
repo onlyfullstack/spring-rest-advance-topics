@@ -10,7 +10,6 @@ public class MailSettings {
     private String server;
     private String username;
     private String password;
-    private String customSetting;
 
     public String getServer() {
         return server;
@@ -36,21 +35,12 @@ public class MailSettings {
         this.password = password;
     }
 
-    public String getCustomSetting() {
-        return customSetting;
-    }
-
-    public void setCustomSetting(String customSetting) {
-        this.customSetting = customSetting;
-    }
-
     @Override
     public String toString() {
         return "MailSettings{" +
                 "server='" + server + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", customSetting='" + customSetting + '\'' +
                 '}';
     }
 }
