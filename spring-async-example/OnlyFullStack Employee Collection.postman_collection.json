@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "1c12c720-dd7d-469c-842c-c7a9ba6a5f35",
+		"name": "OnlyFullStack Employee Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8088/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8088/employees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"Only\",\n\t\"lastName\" : \"FullStack\",\n\t\"email\" : \"onlyfullstack@gmail.com\",\n\t\"salary\" : \"10000\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8088/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"XYZ\",\n\t\"lastName\" : \"ABC\",\n\t\"email\" : \"xyzabc@gmail.com\",\n\t\"salary\" : \"10000\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8088/employees/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"employees",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8088/employees/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"employees",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
